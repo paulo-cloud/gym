@@ -1,0 +1,670 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#ee702c;
+}
+body{
+    font-family: 'Bebas Neue', sans-serif;
+   
+}
+.bg-geral{
+  position: relative;
+}
+.bg-geral::before{
+    content:  '' ;
+    display: block;
+    position: absolute;
+   background-image:linear-gradient(to top, #3633335b, #363333e7);
+   
+   z-index: 20;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-box{
+   
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+.slide{
+    opacity: 0;
+    width: 100vw;
+    position: absolute;
+    top: -15vh;
+    left: 0.2vw;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+img{
+    width:100%;
+    height: 100vh;
+}
+
+.slide.active{
+    opacity: 1;
+}
+
+
+.seta{
+    position: absolute;
+    border: 2px solid #ee702c;
+    background-color: transparent;
+    font-size: 30px;
+    padding: 20px;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 2000;
+    cursor: pointer;
+}
+.seta:focus{
+    outline: 0;
+}
+.seta-esquerda{
+    left: calc(15vw - 75px);
+}
+.seta-direita{
+    right: calc(15vw - 75px);
+}
+
+.text-hero-box{
+    font-size: 1rem;
+    width: 30%;
+    top: 2rem;
+    left: 5rem;
+    color: #fff;
+    position: absolute;
+    z-index: 40;
+}
+
+.sobre-bg{
+    height: 80vh;
+    background-image: url('../img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personal1{
+    background-image: url('../img/p1.png');
+    background-size: cover;
+    width: 30%;
+    height: 80vh;
+    z-index: 4000;
+}
+.personal2{
+    background-image: url('../img/p2.png');
+    background-size: cover;
+    width: 30%;
+    height: 80vh;
+    z-index: 4000;
+}
+
+
+.text-sobre-box{
+    margin-top: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    z-index: 40;
+}
+.text-sobre-primary{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.text-sobre-secondary{
+    font-size: 1.5rem;
+}
+.programas-bg{
+    height: 90vh;
+    background-image: url('../img/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text-programas-box{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    z-index: 40;
+}
+
+.card-Prog-box{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 20;
+}
+
+
+.card-Prog1 {
+   
+    background-image: url('../img/img7.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+   
+}
+
+
+
+.card-Prog2{
+    
+    background-image: url('../img/img3.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+
+.card-Prog3{
+   
+    background-image: url('../img/img12.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+.overlay{
+    transition: 3.2s;
+}
+
+.card-Prog1 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-Prog1:hover .overlay{
+    opacity: 1;
+}
+
+.card-Prog2 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-Prog2:hover .overlay{
+    opacity: 1;
+}
+
+.card-Prog3 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-Prog3:hover .overlay{
+    opacity: 1;
+}
+
+
+
+
+.equipe-bg{
+    height: 90vh;
+    background-image: url('../img/img15.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+}
+.text-equipe-primary{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    z-index: 40;
+}
+.card-equipe-box{
+    z-index: 20;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-equipe1{
+   
+    background-image: url('../img/img4.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+.card-equipe2{
+   
+    background-image: url('../img/img2.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+
+.card-equipe3{
+  
+    background-image: url('../img/img14.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+.card-equipe1 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-equipe1:hover .overlay{
+    opacity: 1;
+}
+
+.card-equipe2 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-equipe2:hover .overlay{
+    opacity: 1;
+}
+
+.card-equipe3 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-equipe3:hover .overlay{
+    opacity: 1;
+}
+
+
+.text-planos-primary{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    z-index: 40;
+}
+
+.card-plano1{
+   
+    background-image: url('../img/img11.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+.card-plano2{
+   
+    background-image: url('../img/img8.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+
+.card-plano3{
+    
+    background-image: url('../img/img13.jpg');
+    background-size: cover;
+    width: 20%;
+    height: 60vh;
+    position: relative;
+}
+
+.card-plano1 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-plano1:hover .overlay{
+    opacity: 1;
+}
+
+.card-plano2 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.card-plano2:hover .overlay{
+    opacity: 1;
+}
+
+.card-plano3 .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#ee702ca6;
+    box-shadow: 10px 10px 5px black;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 80000;
+}
+
+.text-geral-card{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    color: #FFF;
+    
+}
+.card-plano3:hover .overlay{
+    opacity: 1;
+}
+
+.footer-box{
+    border: 1px solid black;
+    background-color:  #363333a8;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+ul{
+    list-style: none;
+}
+.footer-text-box-contato{
+    z-index: 6000;
+    font-size: 1.5rem;
+}
+.footer-text-box-horario{
+    z-index: 6000;
+    font-size: 1.5rem;
+   
+}
+@media(max-width:600px){
+    .seta{
+        font-size: 1rem;
+    }
+    .seta-esquerda{
+        left: calc(25vw - 75px);
+    }
+    .seta-direita{
+        right: calc(25vw - 75px);
+    }
+    .text-hero-box{
+        font-size: .7rem;
+        width: 50%;
+    }
+    .personal1{
+        display: none;
+    }
+    .personal2{
+        display: none;
+    }
+    .text-sobre-primary{
+        font-size: 1.5rem;
+    }
+    .text-sobre-secondary{
+        font-size: 1rem;
+    }
+    .card-Prog-box{
+        
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        padding: 1rem;
+    }
+
+    .card-Prog1 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-Prog2 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-Prog3 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+
+    .card-equipe-box{
+        
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        padding: 1rem;
+    }
+
+    .card-equipe1 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-equipe2 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-equipe3 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    
+    .card-plano1 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-plano2 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-plano3 {
+        width: 40%;
+        height: 80vh;
+        margin-bottom: 1rem;
+       
+    }
+
+    
+    .footer-text-box-contato{
+        margin-left: 1.5rem;
+        font-size: 1rem;
+    }
+    .footer-text-box-horario{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:900px){
+    .seta{
+        font-size: 1rem;
+    }
+    .seta-esquerda{
+        left: calc(25vw - 75px);
+    }
+    .seta-direita{
+        right: calc(25vw - 75px);
+    }
+    .text-hero-box{
+        font-size: 1rem;
+        width: 50%;
+    }
+    .personal1{
+        width: 30%;
+    }
+    .personal2{
+        width: 30%;
+    }
+    .text-sobre-primary{
+        font-size: 1.5rem;
+    }
+    .text-sobre-secondary{
+        font-size: 1rem;
+    }
+    .card-Prog-box{
+        flex-direction: column;
+        align-items: center;
+        height: 85vh;
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-Prog1 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+        background-position: top center;
+       
+    }
+    .card-Prog2 {
+        width: 20%;
+        height: 85vh;
+        margin-bottom: 1rem;
+        background-position: top center;
+    }
+    .card-Prog3 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top top;
+    }
+
+    .card-equipe-box{
+        
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        padding: 1rem;
+    }
+
+    .card-equipe1 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-equipe2 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-equipe3 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+    
+    .card-plano1 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-plano2 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+    .card-plano3 {
+        width: 20%;
+        height: 95vh;
+        margin-bottom: 1rem;
+       
+    }
+
+    
+    .footer-text-box-contato{
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .footer-text-box-horario{
+        font-size: 1.5rem;
+    }
+}
